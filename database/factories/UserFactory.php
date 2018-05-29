@@ -21,3 +21,22 @@ $factory->define(App\User::class, function (Faker $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+
+$factory->define(App\developer::class, function (Faker $faker) {
+    return [
+        'email' => $faker->unique()->safeEmail,
+    ];
+});
+
+$factory->define(App\language::class, function (Faker $faker) {
+    return [
+        'code' => $faker->unique()->colorName,
+    ];
+});
+
+$factory->define(App\programming_language::class, function (Faker $faker) {
+    return [
+        'name' => $faker->name,
+    ];
+});
