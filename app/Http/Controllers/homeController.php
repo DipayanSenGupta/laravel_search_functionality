@@ -39,7 +39,7 @@ class homeController extends Controller
     }
 	// dd($programming_language);
 	$developers = programming_language::find($id)->developers;
-    $developers_ = language::find($id)->developers;
+    $developers_ = language::find($id_)->developers;
     //$available_roles = $global_roles->merge($user_roles);
     $developers = $developers->merge($developers_);
     // dd($developers);
